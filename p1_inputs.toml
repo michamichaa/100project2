@@ -1,0 +1,52 @@
+# 16.100 Aerodynamics, Fall 2026 -- Project 1 inputs
+#
+# Every value given in the handout, plus your design choices at the bottom.
+# p1_io.load_inputs() reads this file into a Python object, so you never type
+# a handout number into your code. When a later project replaces a placeholder
+# (e, C_Lmax, C_D0), change it here and rerun your scripts.
+#
+# Rules: numbers only, SI units as in the key name, one value per key.
+
+[air]
+g = 9.81                     # m/s^2
+rho = 1.225                  # kg/m^3, sea level
+nu = 1.46e-5                 # m^2/s, kinematic viscosity
+
+[mission]
+range_m = 20000.0            # one leg, still air
+reserve = 0.10               # battery holds 10% more usable energy than the leg needs
+payload_kg = 0.50
+b_max_m = 1.6                # largest span (wind tunnel)
+V_stall_max = 7.0            # m/s, landing requirement
+
+[placeholders]               # replaced by your own values in Projects 2-4
+e_oswald = 0.80
+CLmax = 1.40                 # whole aircraft
+CD0 = 0.035                  # whole aircraft, based on wing area S
+
+[power]
+e_star_Whkg = 150.0          # battery pack specific energy, Wh/kg
+f_usable = 0.90              # usable fraction of the battery energy
+eta = 0.60                   # battery power -> thrust power
+P_max_W = 150.0              # maximum continuous battery power
+
+[wing_mass]                  # W_wing = rho_foam * A_fac * tau * c^2 * b * g
+rho_foam = 25.2              # kg/m^3
+A_fac = 0.66
+tau = 0.12                   # thickness-to-chord ratio
+
+[fuselage_mass]              # m_fuse = m_fuse0 + m_fuse_b * b/b0 + m_fuse_S * S/S0
+m_fuse0_kg = 0.30
+m_fuse_b_kg = 0.15
+m_fuse_S_kg = 0.08
+b0_m = 1.1
+S0_m2 = 0.16
+
+# ---------------------------------------------------------------------------
+# YOUR DESIGN -- replace each nan with your choice (Task 3).
+# ---------------------------------------------------------------------------
+[design]
+S_m2 = nan                   # wing area
+AR = nan                     # aspect ratio
+m_b_kg = nan                 # battery mass
+V_cruise = nan               # m/s
