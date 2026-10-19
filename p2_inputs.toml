@@ -1,0 +1,64 @@
+# 16.100 Aerodynamics, Fall 2026 -- Project 2 inputs
+#
+# Every number that the P2 notebook needs. p2_lib.load_inputs() reads this file
+# into a Python object, so you never type a handout number into your code.
+#
+# Rules: numbers only, one value per key. The unit is in the key name or the comment:
+# SI units, except percent (_pct) and degrees (_deg).
+
+[air]
+rho = 1.225                  # kg/m^3, sea level
+nu = 1.46e-5                 # m^2/s, kinematic viscosity
+
+# ---------------------------------------------------------------------------
+# YOUR P1 DESIGN. Replace these five numbers with your team's P1 values.
+# The values below are the STAFF P1 design. They are only an example.
+# ---------------------------------------------------------------------------
+[p1]
+W_N = 17.2                   # weight, N
+S_m2 = 0.41                  # wing area, m^2
+b_m = 1.59                   # span, m (at most 1.6 m)
+V_cruise = 21.4              # cruise speed, m/s
+CLmax_req = 1.54             # the wing C_Lmax you need (P1 Task 5)
+
+[stall]                      # handout Eq. (2): c_lmax = c_l0 + dcl_stall
+dcl_stall = 0.99             # placeholder, tested in Project 3
+eta_check = 0.9              # apply the stall rule for eta <= eta_check only
+
+[sections]                   # NACA m412: 12% thick, maximum camber m at 40% of the chord
+p_camber = 0.4               # position of the maximum camber, fraction of the chord
+m_min_pct = 0.0              # camber limits, % of the chord
+m_max_pct = 6.0
+
+[planform]
+eta_break = 0.5              # the break, eta = 2y/b
+chord_ratio_min = 0.5        # c_b/c_r and c_t/c_r must be at least this
+
+[tail]
+l_t_m = 0.70                 # tail arm, wing aerodynamic center to tail, m (placeholder, Project 4)
+
+[drag_fit]                   # section drag function cd() (P2-drag-fit.pdf); placeholder, Project 3
+cd0 = 0.010                  # c_d = [cd0 + km m + (cd2 + k2 m) (c_l - c_l0)^2] (Re/Re_ref)^a_Re
+km = 0.0003                  # m in %
+cd2 = 0.002
+k2 = 0.005
+Re_ref = 2.0e5
+a_Re = -0.55
+
+[sliders]                    # slider limits in the design panel (not handout rules)
+chord_ratio_max = 1.5
+theta_min_deg = -6.0
+theta_max_deg = 4.0
+
+# ---------------------------------------------------------------------------
+# YOUR WING. The design panel starts from these values. The start values are
+# the Task 2 example: rectangular, no twist, NACA 4412 everywhere.
+# ---------------------------------------------------------------------------
+[design]
+cb_cr = 1.0                  # chord at the break / root chord
+ct_cr = 1.0                  # chord at the tip / root chord
+theta_b_deg = 0.0            # twist at the break, deg, nose up positive (root = 0)
+theta_t_deg = 0.0            # twist at the tip, deg
+m_r_pct = 4.0                # maximum camber, %: at the root
+m_b_pct = 4.0                #                    at the break
+m_t_pct = 4.0                #                    at the tip
