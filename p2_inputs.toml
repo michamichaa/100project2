@@ -15,11 +15,11 @@ nu = 1.46e-5                 # m^2/s, kinematic viscosity
 # The values below are the STAFF P1 design. They are only an example.
 # ---------------------------------------------------------------------------
 [p1]
-W_N = 17.2                   # weight, N
-S_m2 = 0.41                  # wing area, m^2
-b_m = 1.59                   # span, m (at most 1.6 m)
-V_cruise = 21.4              # cruise speed, m/s
-CLmax_req = 1.54             # the wing C_Lmax you need (P1 Task 5)
+W_N = 20.644                  # weight, N
+S_m2 = .7950                  # wing area, m^2
+b_m = 1.5978                   # span, m (at most 1.6 m)
+V_cruise = 16.71              # cruise speed, m/s
+CLmax_req = 1.09         # the wing C_Lmax you need (P1 Task 5)
 
 [stall]                      # handout Eq. (2): c_lmax = c_l0 + dcl_stall
 dcl_stall = 0.99             # placeholder, tested in Project 3
