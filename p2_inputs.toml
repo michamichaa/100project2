@@ -16,7 +16,7 @@ nu = 1.46e-5                 # m^2/s, kinematic viscosity
 # ---------------------------------------------------------------------------
 [p1]
 W_N = 20.644                  # weight, N
-S_m2 = .7950                  # wing area, m^2
+S_m2 = 0.7950                  # wing area, m^2
 b_m = 1.5978                   # span, m (at most 1.6 m)
 V_cruise = 16.71              # cruise speed, m/s
 CLmax_req = 1.09         # the wing C_Lmax you need (P1 Task 5)
