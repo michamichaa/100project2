@@ -16,8 +16,8 @@
 format = "16.100-P2-v1"
 
 [team]
-group = 0                                      # your group number
-members = ["First Last", "First Last", "First Last"]
+group = 5                                      # your group number
+members = ["Michael Dizon", "Khue Phan", "Avaneesh Pal", "Jordan Prawira"]
 
 # ---------------------------------------------------------------------------
 # Task 3 -- your soft-stall wing: the seven design variables
@@ -37,7 +37,7 @@ m_t_pct = 3.114                     #   at the tip
 [results]
 CLmax = 1.11                       # wing C_Lmax: the lowest C_L* for eta <= 0.9
 eta_first_stall = 0.00125             # eta = 2y/b of the station that stalls first
-e_cruise = .99612                    # span efficiency at your cruise C_L
+e_cruise = 0.99612                    # span efficiency at your cruise C_L
 CDp_cruise = 0.006367                  # wing profile drag coefficient at cruise
 CDi_cruise = 0.002294                  # induced drag coefficient at cruise
 Cm_ac = -0.071637                       # wing pitching moment coefficient about its aerodynamic center
