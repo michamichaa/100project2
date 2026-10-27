@@ -41,4 +41,4 @@ e_cruise = 0.99612                    # span efficiency at your cruise C_L
 CDp_cruise = 0.006367                  # wing profile drag coefficient at cruise
 CDi_cruise = 0.002294                  # induced drag coefficient at cruise
 Cm_ac = -0.071637                       # wing pitching moment coefficient about its aerodynamic center
-M_root_Nm = 0.008661                   # root bending moment, N m, at C_Lmax in level flight (L = W)
+M_root_Nm = 3.556                   # root bending moment, N m, at C_Lmax in level flight (L = W)
